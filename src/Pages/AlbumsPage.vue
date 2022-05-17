@@ -1,6 +1,6 @@
 <template>
     <div>
-        Posts
+        Albums
     </div>
 </template>
 <script>

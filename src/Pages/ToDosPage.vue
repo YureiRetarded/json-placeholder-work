@@ -1,6 +1,6 @@
 <template>
     <div>
-        Posts
+        todos
     </div>
 </template>
 <script>
