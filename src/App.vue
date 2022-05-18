@@ -1,22 +1,25 @@
 <template>
-  <router-view>
-    <router-link to="/PostsPage">PostsPage</router-link>
-    <router-link to="/CommentsPage">CommentsPage</router-link>
-    <router-link to="/PhotosPage">PhotosPage</router-link>
-    <router-link to="/ToDoPage">ToDoPage</router-link>
-    <router-link to="/MainPage">MainPage</router-link>
-    <router-link to="/AlbumsPage">AlbumsPage</router-link>
-  </router-view>
+  <navbar></navbar>
+  <router-view></router-view>
 </template>
 
+<script>
+import Navbar from "@/components/Navbar"
+export default{
+  components:{
+    Navbar
+  }
+}
+</script>
+
 <style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  font-size: 25px;
+  
 }
 
 </style>

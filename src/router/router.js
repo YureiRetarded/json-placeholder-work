@@ -11,23 +11,23 @@ const routes=[
         component:MainPage
     },
     {
-        path:'/',
+        path:'/PostsPage',
         component:PostsPage
     },
     {
-        path:'/',
+        path:'/PhotosPage',
         component:PhotosPage
     },
     {
-        path:'/',
+        path:'/ToDoPage',
         component:ToDosPage
     },
     {
-        path:'/',
+        path:'/CommentsPage',
         component:CommentsPage
     },
     {
-        path:'/',
+        path:'/AlbumsPage',
         component:AlbumsPage
     },
 ]
