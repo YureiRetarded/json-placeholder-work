@@ -1,5 +1,5 @@
 <template>
-    <todo
+    <to-do
         v-for="todo in todos"
         :todo="todo"
         :key="todo.id"
