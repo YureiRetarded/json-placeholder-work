@@ -9,13 +9,19 @@ export default {
     },
     data(){
         return{
-            
+            photos:[]
         }
     },
-    props:{
-        photos:{
-            type:Array,
-            required:true
+    methods:{
+       async fetchPhotos(){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/photos')
+                this.photos = responce
+            }
+            catch(e){
+                alert(e)
+            }
+
         }
     }
 }

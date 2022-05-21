@@ -9,13 +9,19 @@ export default {
     },
     data(){
         return{
-            
+            comments:[]
         }
     },
-    props:{
-        comments:{
-            type:Array,
-            required:true
+    methods:{
+        async fetchComments(){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/comments')
+                this.comments = responce
+            }
+            catch(e){
+                alert(e)
+            }
+
         }
     }
 }

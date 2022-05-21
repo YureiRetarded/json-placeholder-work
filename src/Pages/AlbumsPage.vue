@@ -9,13 +9,19 @@ export default {
     },
     data(){
         return{
-            
+           albums:[] 
         }
     },
-    props:{
-        albums:{
-            type:Array,
-            required:true
+    methods:{
+        async fetchAlbums(){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/albums')
+                this.albums = responce
+            }
+            catch(e){
+                alert(e)
+            }
+
         }
     }
 }

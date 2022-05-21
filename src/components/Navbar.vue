@@ -38,5 +38,6 @@ button{
 }
 .navbar__logo{
     margin: 0 0 0 5px;
+    cursor: pointer;
 }
 </style>

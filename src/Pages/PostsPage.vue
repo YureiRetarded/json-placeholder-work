@@ -9,13 +9,19 @@ export default {
     },
     data(){
         return{
-            
+            posts:[]
         }
     },
-    props:{
-        posts:{
-            type:Array,
-            required:true
+    methods:{
+        async fetchPosts(){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/posts')
+                this.posts = responce.data
+            }
+            catch(e){
+            alert(e)
+            }
+
         }
     }
 }

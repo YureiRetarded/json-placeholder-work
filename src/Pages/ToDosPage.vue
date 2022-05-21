@@ -9,13 +9,19 @@ export default {
     },
     data(){
         return{
-            
+            todos:[]
         }
     },
-    props:{
-        todos:{
-            type:Array,
-            required:true
+    methods:{
+        async fetchTodos(){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/todos')
+                this.todos = responce
+            }
+            catch(e){
+                alert(e)
+            }
+
         }
     }
 }
