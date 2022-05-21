@@ -1,10 +1,16 @@
 <template>
-    <div>
-        
-    </div>
+    <post
+        v-for="post in posts"
+        :post="post"
+        :key="post.id"
+    />
 </template>
 <script>
+import Post from '@/components/Post'
 export default {
+    components:{
+        Post
+    },
     data(){
         return{
             

@@ -1,10 +1,12 @@
 <template>
-    <div>
-        Comments
-    </div>
+    <comments-list :comments="comments"/>
 </template>
 <script>
+import CommentsList from "@/components/CommentsList"
 export default {
+    components:{
+        CommentsList
+    },
     data(){
         return{
             

@@ -1,10 +1,16 @@
 <template>
-    <div>
-        
-    </div>
+    <todo
+        v-for="todo in todos"
+        :todo="todo"
+        :key="todo.id"
+    />
 </template>
 <script>
+import ToDo from '@/components/ToDo'
 export default {
+    components:{
+        ToDo
+    },
     data(){
         return{
             

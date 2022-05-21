@@ -1,10 +1,12 @@
 <template>
-    <div>
-        Posts
-    </div>
+    <post-list :posts="posts"/>
 </template>
 <script>
+import PostsList from '@/components/PostsList'
 export default {
+    components:{
+        PostsList
+    },
     data(){
         return{
             

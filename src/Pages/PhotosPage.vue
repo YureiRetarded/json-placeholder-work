@@ -1,10 +1,12 @@
 <template>
-    <div>
-        Photos
-    </div>
+    <photos-list :photos="photos"/>
 </template>
 <script>
+import PhotosList from '@/components/PhotosList'
 export default {
+    components:{
+        PhotosList
+    },
     data(){
         return{
             
