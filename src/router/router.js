@@ -1,9 +1,9 @@
-import MainPage from '@/Pages/MainPage'
-import PostsPage from '@/Pages/PostsPage'
-import PhotosPage from '@/Pages/PhotosPage'
-import ToDosPage from '@/Pages/ToDosPage'
-import CommentsPage from '@/Pages/CommentsPage'
-import AlbumsPage from '@/Pages/AlbumsPage'
+import MainPage from '@/pages/MainPage'
+import PostsPage from '@/pages/PostsPage'
+import PhotosPage from '@/pages/PhotosPage'
+import ToDosPage from '@/pages/ToDosPage'
+import CommentsPage from '@/pages/CommentsPage'
+import AlbumsPage from '@/pages/AlbumsPage'
 import { createRouter, createWebHashHistory } from 'vue-router'
 const routes=[
     {

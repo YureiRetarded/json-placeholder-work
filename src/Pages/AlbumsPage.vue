@@ -1,10 +1,12 @@
 <template>
-    <div>
-        Albums
-    </div>
+    <albums-list :albums="albums"/>
 </template>
 <script>
+import AlbumsList from "@/components/AlbumsList"
 export default {
+    components:{
+        AlbumsList
+    },
     data(){
         return{
             
