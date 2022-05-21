@@ -2,6 +2,7 @@
     <comments-list :comments="comments"/>
 </template>
 <script>
+import axios from 'axios'
 import CommentsList from "@/components/CommentsList"
 export default {
     components:{
@@ -16,13 +17,16 @@ export default {
         async fetchComments(){
             try{
                 const responce = await axios.get('https://jsonplaceholder.typicode.com/comments')
-                this.comments = responce
+                this.comments = responce.data
             }
             catch(e){
                 alert(e)
             }
 
         }
+    },
+    mounted(){
+        this.fetchComments();
     }
 }
 </script>

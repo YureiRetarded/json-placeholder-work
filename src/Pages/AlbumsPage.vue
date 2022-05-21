@@ -2,6 +2,7 @@
     <albums-list :albums="albums"/>
 </template>
 <script>
+import axios from 'axios'
 import AlbumsList from "@/components/AlbumsList"
 export default {
     components:{
@@ -23,6 +24,9 @@ export default {
             }
 
         }
+    },
+    mounted(){
+        this.fetchAlbums();
     }
 }
 </script>

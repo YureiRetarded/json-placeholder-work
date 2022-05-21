@@ -1,7 +1,8 @@
 <template>
-    <post-list :posts="posts"/>
+    <posts-list :posts="posts"/>
 </template>
 <script>
+import axios from 'axios'
 import PostsList from '@/components/PostsList'
 export default {
     components:{
@@ -23,6 +24,9 @@ export default {
             }
 
         }
+    },
+    mounted(){
+        this.fetchPosts();
     }
 }
 </script>
