@@ -1,6 +1,8 @@
 <template>
-  <navbar></navbar>
-  <router-view></router-view>
+  <navbar class="navbar"></navbar>
+  <div class="content">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -24,8 +26,14 @@ export default{
   margin: 0;
   box-sizing: border-box;
 }
-#app {
-  
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
+.content{
+  margin-top: 60px;
+}
+
 
 </style>
