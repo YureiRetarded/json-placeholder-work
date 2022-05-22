@@ -7,6 +7,7 @@
             <button @click="$router.push('/PhotosPage')">PhotosPage</button>
             <button @click="$router.push('/ToDoPage')">ToDoPage</button>
             <button @click="$router.push('/AlbumsPage')">AlbumsPage</button>
+            <button @click="$router.push('/UsersPage')">UsersPage</button>
         </div>
     </div>
 </template>

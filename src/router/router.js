@@ -4,6 +4,7 @@ import PhotosPage from '@/pages/PhotosPage'
 import ToDosPage from '@/pages/ToDosPage'
 import CommentsPage from '@/pages/CommentsPage'
 import AlbumsPage from '@/pages/AlbumsPage'
+import UsersPage from '@/pages/UsersPage'
 import { createRouter, createWebHashHistory } from 'vue-router'
 const routes=[
     {
@@ -30,6 +31,10 @@ const routes=[
         path:'/AlbumsPage',
         component:AlbumsPage
     },
+    {
+        path:'/UsersPage',
+        component:UsersPage
+    }
 ]
 const router = createRouter({
     routes,
