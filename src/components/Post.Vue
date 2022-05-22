@@ -4,14 +4,15 @@
             <div class="post__title">{{post.title}}</div>
             <div class="post__body">{{post.body}}</div>
         </div>
-        <div class="post__user">Пользователь: {{post.userId}}</div>
+        <div class="post__user">{{user_name}}</div>
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
     data(){
         return{
-            
+            user_name:''
         }
     },
     props:{
@@ -19,6 +20,24 @@ export default {
             type:Object,
             required:true
         }
+    },
+    methods:{
+        async fetchUserName(userid){
+            try{
+                let PathString='https://jsonplaceholder.typicode.com/users?id='
+                PathString=PathString+userid
+                const responce = await axios.get(PathString)
+                let user=responce.data
+                this.user_name=user[0].name
+            }
+            catch{
+                this.user_name='user not found'
+            }
+            
+        }
+    },
+    created(){
+        this.fetchUserName(this.post.userId)
     }
 }
 </script>
