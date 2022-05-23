@@ -6,7 +6,7 @@
             >{{post.title}}</div>
             <div class="post__body">{{post.body}}</div>
         </div>
-        <div class="post__user">{{user_name}}</div>
+        <div  @click="$router.push('/UsersPage/'+post.userId)" class="post__user">{{user_name}}</div>
     </div>
 </template>
 <script>
@@ -46,7 +46,6 @@ export default {
 <style scoped>
     .post__wrapper{
         color: #CDD1C4;
-        margin-bottom: 10px;
         padding: 10px;
         border: 3px solid #CDD1C4;
         border-radius: 5px;
@@ -66,5 +65,6 @@ export default {
     .post__user{
         text-align: end;
         font-size: 20px;
+        cursor: pointer;
     }
 </style>

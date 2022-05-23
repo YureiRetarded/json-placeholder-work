@@ -30,7 +30,7 @@ export default {
 }
 button{
     background-color: #5C80BC;
-    color: #30323D;
+    color: #CDD1C4;
     border: none;
     font-size: 20px;
     cursor: pointer;
@@ -39,5 +39,6 @@ button{
 .navbar__logo{
     margin: 0 0 0 5px;
     cursor: pointer;
+    color: #CDD1C4;
 }
 </style>
