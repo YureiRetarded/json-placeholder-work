@@ -3,7 +3,6 @@ import PostsPage from '@/pages/PostsPage'
 import PostPage from '@/pages/PostPage'
 import PhotosPage from '@/pages/PhotosPage'
 import ToDosPage from '@/pages/ToDosPage'
-import CommentsPage from '@/pages/CommentsPage'
 import AlbumsPage from '@/pages/AlbumsPage'
 import UsersPage from '@/pages/UsersPage'
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -27,10 +26,6 @@ const routes=[
     {
         path:'/ToDoPage',
         component:ToDosPage
-    },
-    {
-        path:'/CommentsPage',
-        component:CommentsPage
     },
     {
         path:'/AlbumsPage',

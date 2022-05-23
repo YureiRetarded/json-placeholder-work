@@ -7,15 +7,15 @@
         <div class="post__user">{{user[0].name}}</div>
     </div>
     <div>
-        Коментарии
-        {{comments}}
+        <comments-list :comments="comments"/>
     </div>
 </template>
 <script>
 import axios from 'axios'
+import CommentsList from '@/components/CommentsList'
 export default {
  components:{
-        
+        CommentsList
     },
     data(){
         return{
@@ -61,7 +61,6 @@ export default {
     created(){
         this.postId=this.$route.params.id
         this.fetchPost(this.postId);
-        //this.fetchUser(this.post[0]);
         this.fetchComments(this.postId);
     } 
 }
@@ -71,9 +70,8 @@ export default {
         color: #CDD1C4;
         margin-bottom: 10px;
         padding: 10px;
-        border: 3px solid #CDD1C4;
-        border-radius: 5px;
         margin: 10px;
+        margin-bottom: 50px;
     }
     .post__data{
 
