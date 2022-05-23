@@ -1,5 +1,6 @@
 import MainPage from '@/pages/MainPage'
 import PostsPage from '@/pages/PostsPage'
+import PostPage from '@/pages/PostPage'
 import PhotosPage from '@/pages/PhotosPage'
 import ToDosPage from '@/pages/ToDosPage'
 import CommentsPage from '@/pages/CommentsPage'
@@ -14,6 +15,10 @@ const routes=[
     {
         path:'/PostsPage',
         component:PostsPage
+    },
+    {
+        path:'/PostsPage/:id',
+        component:PostPage
     },
     {
         path:'/PhotosPage',

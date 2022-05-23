@@ -1,7 +1,9 @@
 <template>
     <div class="post__wrapper">
         <div class="post__data">
-            <div class="post__title">{{post.title}}</div>
+            <div class="post__title"
+            @click="$router.push('/PostsPage/'+post.id)"
+            >{{post.title}}</div>
             <div class="post__body">{{post.body}}</div>
         </div>
         <div class="post__user">{{user_name}}</div>
@@ -55,6 +57,7 @@ export default {
     }
     .post__title{
         font-size:40px;
+        cursor: pointer;
     }
     .post__body{
         margin-top: 5px;
