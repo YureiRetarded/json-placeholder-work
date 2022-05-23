@@ -1,9 +1,12 @@
 import MainPage from '@/pages/MainPage'
 import PostsPage from '@/pages/PostsPage'
-import PhotosPage from '@/pages/PhotosPage'
+import PostPage from '@/pages/PostPage'
+import PhotoPage from '@/pages/PhotoPage'
 import ToDosPage from '@/pages/ToDosPage'
-import CommentsPage from '@/pages/CommentsPage'
 import AlbumsPage from '@/pages/AlbumsPage'
+import UsersPage from '@/pages/UsersPage'
+import UserPage from '@/pages/UserPage'
+import AlbumPage from '@/pages/AlbumPage'
 import { createRouter, createWebHashHistory } from 'vue-router'
 const routes=[
     {
@@ -15,20 +18,32 @@ const routes=[
         component:PostsPage
     },
     {
-        path:'/PhotosPage',
-        component:PhotosPage
+        path:'/PostsPage/:id',
+        component:PostPage
+    },
+    {
+        path:'/PhotosPage/:id',
+        component:PhotoPage
     },
     {
         path:'/ToDoPage',
         component:ToDosPage
     },
     {
-        path:'/CommentsPage',
-        component:CommentsPage
-    },
-    {
         path:'/AlbumsPage',
         component:AlbumsPage
+    },
+    {
+        path:'/AlbumsPage/:id',
+        component:AlbumPage
+    },
+    {
+        path:'/UsersPage',
+        component:UsersPage
+    },
+    {
+        path:'/UsersPage/:id',
+        component:UserPage
     },
 ]
 const router = createRouter({
