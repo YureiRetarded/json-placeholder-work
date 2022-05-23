@@ -1,7 +1,7 @@
 import MainPage from '@/pages/MainPage'
 import PostsPage from '@/pages/PostsPage'
 import PostPage from '@/pages/PostPage'
-import PhotosPage from '@/pages/PhotosPage'
+import PhotoPage from '@/pages/PhotoPage'
 import ToDosPage from '@/pages/ToDosPage'
 import AlbumsPage from '@/pages/AlbumsPage'
 import UsersPage from '@/pages/UsersPage'
@@ -22,8 +22,8 @@ const routes=[
         component:PostPage
     },
     {
-        path:'/PhotosPage',
-        component:PhotosPage
+        path:'/PhotosPage/:id',
+        component:PhotoPage
     },
     {
         path:'/ToDoPage',

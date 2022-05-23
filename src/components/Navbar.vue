@@ -3,9 +3,6 @@
         <div class="navbar__logo" @click="$router.push('/')">JSON</div>
         <div class="navbar__btns">
             <button @click="$router.push('/PostsPage')">PostsPage</button>
-            <button @click="$router.push('/PhotosPage')">PhotosPage</button>
-            <button @click="$router.push('/ToDoPage')">ToDoPage</button>
-            <button @click="$router.push('/AlbumsPage')">AlbumsPage</button>
             <button @click="$router.push('/UsersPage')">UsersPage</button>
         </div>
     </div>

@@ -17,7 +17,7 @@ export default {
         async fetchPhotos(album_id){
             try{
                 const responce = await axios.get('https://jsonplaceholder.typicode.com/photos?albumId='+album_id)
-                this.photos = responce
+                this.photos = responce.data
             }
             catch(e){
                 alert(e)
