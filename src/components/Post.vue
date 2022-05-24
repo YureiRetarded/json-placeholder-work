@@ -43,28 +43,30 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
     .post__wrapper{
         color: #CDD1C4;
         padding: 10px;
         border: 3px solid #CDD1C4;
         border-radius: 5px;
         margin: 10px;
-    }
-    .post__data{
 
+        .post__data{
+
+        }
+        .post__title{
+            font-size:40px;
+            cursor: pointer;
+        }
+        .post__body{
+            margin-top: 5px;
+            font-size:30px;
+        }
+        .post__user{
+            text-align: end;
+            font-size: 20px;
+            cursor: pointer;
+        }
     }
-    .post__title{
-        font-size:40px;
-        cursor: pointer;
-    }
-    .post__body{
-        margin-top: 5px;
-        font-size:30px;
-    }
-    .post__user{
-        text-align: end;
-        font-size: 20px;
-        cursor: pointer;
-    }
+    
 </style>
