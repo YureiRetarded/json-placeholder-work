@@ -4,7 +4,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
 import Navbar from "@/components/Navbar"
 export default{
@@ -22,7 +21,6 @@ export default{
 <style>
 .content{
   margin-top: 70px;
+  margin-bottom: 50px;
 }
-
-
 </style>

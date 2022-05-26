@@ -4,7 +4,7 @@
             <div class="post__title">{{post[0].title}}</div>
             <div class="post__body">{{post[0].body}}</div>
         </div>
-        <div class="post__user">{{user[0].name}}</div>
+        <div @click="$router.push('/UsersPage/'+user[0].id)" class="post__user">{{user[0].name}}</div>
     </div>
     <div>
         <comments-list :comments="comments"/>
@@ -78,13 +78,17 @@ export default {
     }
     .post__title{
         font-size:40px;
+        color: #000;
     }
     .post__body{
         margin-top: 5px;
         font-size:30px;
+        color: #212529;
     }
     .post__user{
         text-align: end;
         font-size: 20px;
+        color: #000;
+        cursor: pointer;
     }
 </style>
