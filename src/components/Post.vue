@@ -1,16 +1,13 @@
 <template>
-    <!-- <div class="row"> -->
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h4 @click="$router.push('/PostsPage/'+post.id)" class="card-title post-title">{{post.title}}</h4>
-                    <h6 @click="$router.push('/UsersPage/'+post.userId)" class="sub-title user-name" >{{user_name}}</h6>
-                    <div class="card-text">{{post.body}}</div>
-                </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h4 @click="$router.push('/PostsPage/'+post.id)" class="card-title post-title">{{post.title}}</h4>
+                <h6 @click="$router.push('/UsersPage/'+post.userId)" class="sub-title user-name" >{{user_name}}</h6>
+                <div class="card-text">{{post.body}}</div>
             </div>
         </div>
-    <!-- </div> -->
-    
+    </div>
 </template>
 <script>
 import axios from 'axios'

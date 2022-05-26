@@ -1,6 +1,6 @@
 <template>
   <navbar class="navbar"></navbar>
-  <div class="container">
+  <div class="container content">
     <router-view></router-view>
   </div>
 </template>
@@ -19,10 +19,9 @@ export default{
   }
 }
 </script>
-
 <style>
 .content{
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 
