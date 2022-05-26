@@ -1,41 +1,43 @@
 <template>
-    <div class="navbar">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <div class="navbar-brand" @click="$router.push('/')">
+            <img src="@/assets/logo.svg" width="30" height="30">
+        </div>
+        <div class=" navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div @click="$router.push('/PostsPage')" class="nav-link active">Posts</div>
+        </li>
+        <li class="nav-item">
+          <div @click="$router.push('/UsersPage')" class="nav-link active">Users</div>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+
+
+    <!-- <div class="navbar">
         <div class="navbar__logo" @click="$router.push('/')">JSON</div>
         <div class="navbar__btns">
             <button @click="$router.push('/PostsPage')">PostsPage</button>
             <button @click="$router.push('/UsersPage')">UsersPage</button>
         </div>
-    </div>
+    </div> -->
 </template>
 <script>
 export default {
     
 }
 </script>
-<style scoped >
-.navbar{
-    height: 50px;
-    background-color: #5C80BC;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-}
-.navbar__btns{
-    display: flex;
+<style lang="scss" scoped >
+.navbar-brand{
+    cursor: pointer;
     
 }
-button{
-    background-color: #5C80BC;
-    color: #CDD1C4;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 0 5px;
-}
-.navbar__logo{
-    margin: 0 0 0 5px;
-    cursor: pointer;
-    color: #CDD1C4;
+.nav-item{
+        cursor: pointer;
 }
 </style>

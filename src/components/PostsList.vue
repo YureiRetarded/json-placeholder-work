@@ -1,10 +1,12 @@
 <template>
     <div class="container">
-         <post
-        v-for="post in posts"
-        :post="post"
-        :key="post.id"
-    />
+        <div class="row row-cols-1 gy-3">
+            <post
+                v-for="post in posts"
+                :post="post"
+                :key="post.id"
+            />
+        </div>
     </div>
    
 </template>
@@ -27,6 +29,6 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
     
 </style>

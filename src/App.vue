@@ -1,6 +1,6 @@
 <template>
   <navbar class="navbar"></navbar>
-  <div class="content">
+  <div class="container">
     <router-view></router-view>
   </div>
 </template>
@@ -21,16 +21,6 @@ export default{
 </script>
 
 <style>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.navbar{
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .content{
   margin-top: 60px;
 }

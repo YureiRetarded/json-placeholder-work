@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <!-- <div class="row"> -->
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -9,7 +9,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     
 </template>
 <script>
@@ -47,22 +47,18 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-    .row{
-        margin-bottom: 5px;
-        .post-title{
-            cursor: pointer;
+    .post-title{
+        cursor: pointer;
             transition: 0.5s;
             &:hover{
                 color: #000;
             }
-        }
-        .user-name{
-            cursor: pointer;
-            transition: 0.5s;
-            &:hover{
-                color: #000;
-            }
+    }
+    .user-name{
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            color: #000;
         }
     }
-   
 </style>
