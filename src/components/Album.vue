@@ -4,6 +4,7 @@
         @click="$router.push('/AlbumsPage/'+album.id)" 
         class="album__title">{{album.title}}</div>
     </div>
+    
 </template>
 <script>
 export default {
