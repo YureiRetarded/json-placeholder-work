@@ -1,52 +1,61 @@
 <template>
-     <div class="user__wrapper">
-        <div class="user-basic-info">
-            Basic info
-            <div class="user__name">{{user.name}}</div>
-            <div class="user__email">{{user.email}}</div>
-            <div class="user__phone">{{user.phone}}</div>
-            <div class="user__website">{{user.website}}</div>
-        </div>
-        <div class="user-address">
-            Address
-            <div class="user-address__street">{{user.address.street}}</div>
-            <div class="user-address__suite">{{user.address.suite}}</div>
-            <div class="user-address__city">{{user.address.city}}</div>
-            <div class="user-address__zipcode">{{user.address.zipcode}}</div>
-            <div class="user-address__coordinates">Coordinates
-                <div>
-                    lat:{{user.address.geo.lat}}
+    <div class="container b1">
+        <div class="row">
+            <div class="col-sm">
+                <div class="user-basic-info">
+                    <div class="user-basic-info__name"><h1>{{user.name}}</h1></div>
+                    <div class="user-basic-info__email"><h4>Email: {{user.email}}</h4></div>
+                    <div class="user-basic-info__phone"><h4>Phone: {{user.phone}}</h4></div>
+                    <div class="user-basic-info__website"><h4>WebPage: <a :href="'https://'+user.website">{{user.website}}</a> </h4></div>
                 </div>
-                <div>
-                    lng:{{user.address.geo.lng}}
+            </div>
+            <div class="col-sm">
+                <div class="user-adress">
+                    <div class="user-adress__title"><h1>Adress</h1></div>
+                    <div class="user-adress__city"><h4>City: {{user.address.city}}</h4></div>
+                    <div class="user-adress__street"><h4>Street: {{user.address.street}}</h4></div>
+                    <div class="user-adress__suite"><h4>Suite: {{user.address.suite}}</h4></div>
+                    <div class="user-adress__zipcode"><h4>Zipcode: {{user.address.zipcode}}</h4></div>
+                    <div class="user-adress__geo"><h4>Geo: <a :href="'https://www.google.com/maps/search/?api=1&query='+user.address.geo.lat+'%2C'+user.address.geo.lng">{{user.address.geo.lat}}, {{user.address.geo.lng}} </a></h4></div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="user-work">
+                    <div class="user-adress__title"><h1>Work</h1></div>
+                    <div class="user-adress__city"><h4>Company name: {{user.company.name}}</h4></div>
+                    <div class="user-adress__street"><h4>CatchPhrase: {{user.company.catchPhrase}}</h4></div>
+                    <div class="user-adress__suite"><h4>Bs: {{user.company.bs}}</h4></div>
                 </div>
             </div>
         </div>
-        <div class="user-work">
-            Work
-            <div class="company__name">{{user.company.name}}</div>
-            <div class="company__catchPhrase">{{user.company.catchPhrase}}</div>
-            <div class="company__bs">{{user.company.bs}}</div>
-        </div>
+        
     </div>
-    <div class="user__album">
-    Albums
-    <albums-list :albums="albums"/>
+    <div class="container b2">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#collapseAlbums" aria-expanded="false" aria-controls="collapseAlbums"><h3>Albums</h3></button>
+        <div class="collapse" id="collapseAlbums">
+            <albums-list :albums="albums"/>
+        </div>  
     </div>
+    <div class="container b3">
+        <posts-list :posts="posts"/>
+    </div>
+    
 
 </template>
 <script>
 import axios from 'axios'
 import AlbumsList from "@/components/AlbumsList"
+import PostsList from '@/components/PostsList'
 export default {
  components:{
-        AlbumsList
+        AlbumsList,PostsList
     },
     data(){
         return{
             user_id:0,
             user:{},
-            albums:[]
+            albums:[],
+            posts:[]
         }
     },
     methods:{
@@ -69,30 +78,32 @@ export default {
                 alert(e)
             }
 
+        },
+        async fetchPosts(userId){
+            try{
+                const responce = await axios.get('https://jsonplaceholder.typicode.com/posts?userId='+userId)
+                this.posts = responce.data
+            }
+            catch(e){
+            alert(e)
+            }
+
         }
     },
     created(){
         this.user_id=this.$route.params.id
         this.fetchUser(this.user_id);
         this.fetchAlbums(this.user_id);
+        this.fetchPosts(this.user_id)
     } 
 }
 </script>
-<style>
-    .user__wrapper{
-        font-size: 25px;
-        color: #CDD1C4;
-        padding: 10px;
-        margin: 10px;
-        cursor: pointer;
-        display: flex;
-    }
-    .user-address {
-        margin: 0 30px;
-    }
-    .user__album{
-        font-size: 50px;
-        color: #CDD1C4;
-        margin: 10px;
-    }
+<style scoped lang="scss">
+a{
+    text-decoration: none;
+    color: #000;
+}
+.b1, .b2, .b3{
+    margin-bottom: 20px;
+}
 </style>
