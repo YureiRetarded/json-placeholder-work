@@ -1,9 +1,11 @@
 <template>
-    <album 
+    <div class="list-group">
+      <album 
         v-for="album in albums"
         :album="album"
         :key="album.id"
     />
+    </div>
 </template>
 <script>
 import Album from '@/components/Album'
@@ -24,6 +26,6 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped lang="scss">
     
 </style>

@@ -1,10 +1,13 @@
 <template>
-    <div class="user__wrapper" @click="$router.push('/UsersPage/'+user.id)">
-        <div class="user__name">{{user.name}}</div>
-        <div class="user__email">{{user.email}}</div>
-        <div class="user__phone">{{user.phone}}</div>
+    <div class="col">
+        <div class="card">
+            <div @click="$router.push('/UsersPage/'+user.id)" class="card-body">
+                <h4 class="card-title post-title">{{user.name}}</h4>
+                <h6 class="sub-title user-name" >{{user.email}}</h6>
+                <h6 class="sub-title user-name" >{{user.phone}}</h6>
+            </div>
+        </div>
     </div>
-    
 </template>
 <script>
 export default {
@@ -17,12 +20,7 @@ export default {
 }
 </script>
 <style scoped>
-    .user__wrapper{
-        color: #CDD1C4;
-        padding: 10px;
-        border: 3px solid #CDD1C4;
-        border-radius: 5px;
-        margin: 10px;
+    .card{
         cursor: pointer;
     }
 </style>

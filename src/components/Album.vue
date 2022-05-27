@@ -1,9 +1,13 @@
 <template>
-    <div class="album__wrapper">
+    <button
+        type="button" 
+        class="list-group-item list-group-item-action">
         <div
         @click="$router.push('/AlbumsPage/'+album.id)" 
-        class="album__title">{{album.title}}</div>
-    </div>
+        class="album__title">{{album.title}}
+        </div>
+    </button >
+    
 </template>
 <script>
 export default {
@@ -21,12 +25,9 @@ export default {
 }
 </script>
 <style scoped>
-.album__wrapper{
- 
-}
 .album__title{
     font-size: 30px;
-    color: #CDD1C4;
+    color: #000;
     cursor: pointer;
     display: inline-block;
 }

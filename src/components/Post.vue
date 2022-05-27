@@ -1,12 +1,12 @@
 <template>
-    <div class="post__wrapper">
-        <div class="post__data">
-            <div class="post__title"
-            @click="$router.push('/PostsPage/'+post.id)"
-            >{{post.title}}</div>
-            <div class="post__body">{{post.body}}</div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h4 @click="$router.push('/PostsPage/'+post.id)" class="card-title post-title">{{post.title}}</h4>
+                <h6 @click="$router.push('/UsersPage/'+post.userId)" class="sub-title user-name" >{{user_name}}</h6>
+                <div class="card-text">{{post.body}}</div>
+            </div>
         </div>
-        <div  @click="$router.push('/UsersPage/'+post.userId)" class="post__user">{{user_name}}</div>
     </div>
 </template>
 <script>
@@ -44,29 +44,18 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-    .post__wrapper{
-        color: #CDD1C4;
-        padding: 10px;
-        border: 3px solid #CDD1C4;
-        border-radius: 5px;
-        margin: 10px;
-
-        .post__data{
-
-        }
-        .post__title{
-            font-size:40px;
-            cursor: pointer;
-        }
-        .post__body{
-            margin-top: 5px;
-            font-size:30px;
-        }
-        .post__user{
-            text-align: end;
-            font-size: 20px;
-            cursor: pointer;
+    .post-title{
+        cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                color: #000;
+            }
+    }
+    .user-name{
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            color: #000;
         }
     }
-    
 </style>

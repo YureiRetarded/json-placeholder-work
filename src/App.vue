@@ -1,10 +1,9 @@
 <template>
   <navbar class="navbar"></navbar>
-  <div class="content">
+  <div class="container content">
     <router-view></router-view>
   </div>
 </template>
-
 <script>
 import Navbar from "@/components/Navbar"
 export default{
@@ -19,21 +18,9 @@ export default{
   }
 }
 </script>
-
 <style>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.navbar{
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .content{
-  margin-top: 60px;
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
-
-
 </style>
