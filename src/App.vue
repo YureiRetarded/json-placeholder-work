@@ -22,5 +22,6 @@ export default{
 .content{
   margin-top: 70px;
   margin-bottom: 50px;
+  min-width:260px
 }
 </style>

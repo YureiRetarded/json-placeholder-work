@@ -1,5 +1,5 @@
 <template>
-    <div class="container b1">
+    <div v-if="user" class="container b1">
         <div class="row">
             <div class="col-sm">
                 <div class="user-basic-info">
@@ -30,13 +30,13 @@
         </div>
         
     </div>
-    <div class="container b2">
+    <div v-if="user" class="container b2">
         <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#collapseAlbums" aria-expanded="false" aria-controls="collapseAlbums"><h3>Albums</h3></button>
         <div class="collapse" id="collapseAlbums">
             <albums-list :albums="albums"/>
         </div>  
     </div>
-    <div class="container b3">
+    <div  v-if="user" class="container b3">
         <posts-list :posts="posts"/>
     </div>
     
