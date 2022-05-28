@@ -1,15 +1,9 @@
 <template>
     <div class="col">
-        <div @click="$router.push('/PhotosPage/'+photo.id)" class="card">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img class="photo__small" :src="photo.thumbnailUrl">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        {{photo.title}}
-                    </div>
-                </div>
+        <div @click="$router.push('/PhotosPage/'+photo.id)" class="card h-100 w-100" >
+            <img :src="photo.thumbnailUrl" class="card-image-top">
+            <div class="card-body">
+                <h6 class="card-title">{{photo.title}}</h6>
             </div>
         </div>
     </div>
@@ -29,5 +23,13 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+.col{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    max-width: 13rem;
+    min-width: 13rem;
+}
 </style>

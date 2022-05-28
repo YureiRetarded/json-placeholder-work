@@ -1,7 +1,10 @@
 <template>
   <navbar class="navbar"></navbar>
-  <div class="container content">
-    <router-view></router-view>
+  <div class="container">
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    
   </div>
 </template>
 <script>
@@ -22,5 +25,6 @@ export default{
 .content{
   margin-top: 70px;
   margin-bottom: 50px;
+  min-width:260px
 }
 </style>

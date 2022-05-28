@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <div class="row row-cols-1 gy-3">
+    <div class="row g-3" >
         <photo
             v-for="photo in photos"
             :photo="photo"
