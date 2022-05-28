@@ -1,10 +1,7 @@
 <template>
-    <div>
-        <div class="photo__title">{{photo.title}}</div>
-        <div class="photo__container">
-             <img class="photo__image" :src="photo.url">
-        </div>
-       
+    <div class="container">
+        <div class="photo__title"><h1>{{photo.title}}</h1></div>
+        <img class="photo__image" :src="photo.url">
     </div>
 </template>
 <script>
@@ -36,16 +33,9 @@ export default {
 }
 </script>
 <style scoped>
-    .photo__title {
-        text-align: center;
-        font-size: 50px;
-    }
-    .photo__container{
+    .container{
         display: flex;
         justify-content: center;
-    }
-    .photo__image {
-        width: 600px;
-        height: 600px;
+        flex-direction: column;
     }
 </style>
