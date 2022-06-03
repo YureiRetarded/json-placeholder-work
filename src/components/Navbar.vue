@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container">
       <div class="navbar-brand" @click="$router.push('/')">
           <img src="@/assets/logo.svg" width="30" height="30">
@@ -18,7 +18,7 @@
         </ul>
       </div>
     </div>
-</nav>
+  </nav>
 </template>
 <script>
 export default {
