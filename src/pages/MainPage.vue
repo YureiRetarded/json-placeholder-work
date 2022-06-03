@@ -9,7 +9,7 @@
   </div>
   <div class="container b2">
     <div class="main-text">
-      <p>Сайт полностью создан на vue, используется 'vue router' и 'vuex', также используется 'bootstrap 5'</p>
+      <p>Сайт полностью создан на vue, используется 'vue router' и 'bootstrap 5'</p>
       <a class="btn btn-dark" href="https://github.com/YureiRetarded">My GitHub</a>
     </div>
   </div>
